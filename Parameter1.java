@@ -13,9 +13,9 @@ public class Parameter1{
 		System.out.println(returnName);
 		long returnNumber2 = getLargeNumber(40,20);
 		System.out.println(returnNumber2);
-		short returnValue2 = isPositive(30);
+		int returnValue2 = isPositive(30);
 		System.out.println(returnValue2);
-		short returnValue3 = isPositive(-20);
+		int returnValue3 = isNegative(-20);
 		System.out.println(returnValue3);
 		long returnNumber3 = getSmallNumber(50,20);
 		System.out.println(returnNumber3);
@@ -43,12 +43,12 @@ public class Parameter1{
 		if(score>=60)
 		{
 			System.out.println("pass");
-			return true;
+			return 'p';
 		}
 		else
 		{
 			System.out.println("fail");
-			return false;
+			return 'f';
 		}
 	}
 	
@@ -72,12 +72,12 @@ public class Parameter1{
 		if(z>0)
 		{
 			System.out.println("addition is valid");
-		    return true;
+		    return 0;
 		}
 		else
 		{
 			System.out.println("addition is not valid");
-		    return false;
+		    return 0;
 		}
 	}
 	
@@ -109,21 +109,21 @@ public class Parameter1{
 		}
 	}
 	
-	public static short isPositive(int number)
+	public static int isPositive(int number)
 	{	
 		if(number>0)
 		{
 			System.out.println("Number is positive");
-		    return true;
+		    return number;
 	}    
 		else
 		{
 			System.out.println("Number is not positive");
-			return false;
+			return number;
 		}
 	}
 	
-	public static short isnegative(int number)
+	public static int isNegative(int number)
 	{	
 		if(number<0)
 		{
@@ -150,3 +150,4 @@ public class Parameter1{
 		    return number2;
 		}
 	}
+}
