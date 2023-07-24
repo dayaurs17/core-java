@@ -1,6 +1,6 @@
 public class Parameter1{
 	public static void main(String[] args){
-		
+		int i;
 		boolean returnedresult = isPrimeNumber(91);
 		System.out.println(returnedresult);
 		char returnScore = getGrade(60);
@@ -19,7 +19,7 @@ public class Parameter1{
 		System.out.println(returnValue3);
 		long returnNumber3 = getSmallNumber(50,20);
 		System.out.println(returnNumber3);
-		
+		System.out.println(i);
 		
 		
 	}
