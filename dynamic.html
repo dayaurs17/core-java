@@ -43,6 +43,56 @@
                   var itemName=getGrocery(100);
                   console.log(itemName)
 
+                  var gender =document.registration.gender
+                  console.log(gender)
+                  console.log(gender[0])
+                  console.log(gender[0].checked)
+                  console.log(gender[1].checked)
+                  console.log(gender[2].checked)
+                  if(gender[0].checked== false && gender[1].checked== false && gender[2].checked== false )
+                  {
+                    console.log("Please enter your gender")
+                    var errorGender = document.getElementById("errorGender")
+                    console.log(errorGender)
+                    errorgender.InnerHtml ="Please Select Gender"
+                    errorGender.style.color ='red'
+                  }
+                   var genderData
+                   if(gender[0].checked == true){
+                    genderData =gender[0].value
+                   }else if(gender[1].checked == true){
+                    genderData =gender[1].value
+                   }else(gender[2].checked == true){
+                    genderData =gender[2].value
+                   }
+                   console.log(genderData)
+                   console.log(firstName.value)
+                   console.log(email.value)
+                   console.log(city.value)
+
+                 //data printing
+                  var registerObject={
+                    'firstName':firstName.value,
+                    'email':email.value,
+                    'city':city.value,
+                    'gender':genderData
+                  }
+
+                  console.log(registerObject)
+                  //storingdata
+                  //converting object into string
+                  var registerStringData = JSON.stringfy(registerObject)
+                  localStorage.setItem("csr12batch",registerObject)
+
+                  //console.log(gender)
+                  //Storage
+                  localStorage.setItem("name","raj")
+                  var usename=localStorage.getItem("name")
+                  console.log(username)
+                  
+
+                  //password and login page
+
                   //javscript to create dynamic web page,event handling,form validation action -response
                   //action-events 
                   
@@ -51,12 +101,26 @@
                     }
 
                     
-                
 
 
 
                 </script>
         </head>
+        <div>
+            <label>Select City </label>
+            <div>
+                <label>Select Gender</label>
+                <input type="radio" name="gender">Male</input>
+                <input type="radio" name="gender">Male</input>
+                <input type="radio" name="gender">Male</input>
+                <input type="radio" name="gender">Male
+                  <span id="errorGender"></span>
+
+</input></div></div>
+              <button onclick="displayMessage()">DisplayMessage</button>
+              <button onclick="mouseOverMessage()">MouseOver</button>
+              <button onclick="doubleClick()">doubleClick</button>
+    
         <body>
             <button onclick="ClickMe()">
                 Click me
