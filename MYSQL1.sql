@@ -1,0 +1,1 @@
+SELECT * FROM database_1.cricket;
