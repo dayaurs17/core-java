@@ -9,7 +9,7 @@ public class OlympicYearImpl implements OlympicYear {
 		
 		if(index<TOTAL_OLYMPICSS) {
 			System.out.println("Value of index at starting:" +index);
-			System.out.println("Politician Name is:"+OlympicName);
+			System.out.println("Olympic Name is:"+OlympicName);
 	  this.name[index]=OlympicName;
 		index=index+1;
 		System.out.println("Value of index after updating:" +index);
